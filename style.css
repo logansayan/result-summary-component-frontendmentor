@@ -33,7 +33,7 @@ html {
 
 body {
     font-family: "Hanken Grotesk", sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,4 +185,29 @@ body {
     padding: 1.5rem;
     border-radius: 4rem;
     margin-top: 2rem;
+    transition: all .2s;
+}
+
+.summary__btn:hover {
+    background-image: linear-gradient(var(--gradient-light-slate-blue), var(--gradient-light-royal-blue));
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .result,
+    .summary {
+        max-width: none;
+    }
+
+    .result {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .summary__item {
+        width: 100%;
+    }
 }
